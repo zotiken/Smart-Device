@@ -1,0 +1,57 @@
+@import "./variablle.scss";
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  font-size: 12px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Blogger Sans", "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  background: #161c35;
+  min-width: 320px;
+  margin: 0;
+
+  // @media (min-width: @screen-md) {
+  //   font-weight: 700;
+  //   font-size: 24px;
+  // }
+
+  // @media (min-width: @screen-xl) {
+  //   font-size: 24px;
+  // }
+}
+
+h1 {
+  color: $text;
+  text-transform: uppercase;
+}
+
+a button {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  & li {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+  }
+}
