@@ -1,0 +1,19 @@
+.link {
+  text-decoration: none;
+  color: $text;
+  transition: color 0.5s linear;
+
+  &:hover {
+    color: #eeeeee;
+    transition: color 0.5s linear;
+  }
+
+  &--dark {
+    color: $darkBackground;
+
+    &:hover {
+      color: #000000;
+      transition: color 0.2s linear;
+    }
+  }
+}

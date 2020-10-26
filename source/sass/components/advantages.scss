@@ -1,0 +1,108 @@
+.advantages {
+  &__list {
+    overflow: unset;
+    width: 100%;
+    min-height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 45px;
+    width: 48%;
+    background: $text;
+    border: 1px solid #ebebeb;
+    border-left: 2px solid $blueBackground;
+    margin-bottom: 20px;
+
+    @media (max-width: $desktop) {
+      padding: 20px 23px;
+    }
+
+    @media (max-width: $tablet) {
+      width: 100%;
+
+      &:nth-child(2) {
+        padding-right: 11px;
+      }
+
+      &:nth-child(4) {
+        padding-right: 13px;
+      }
+    }
+
+    h3 {
+      color: $blueBackground;
+      font-style: 20px;
+      letter-spacing: 1px;
+
+      @media (max-width: $desktop) {
+        margin: 10px 0;
+        font-size: 22px;
+      }
+
+      @media (max-width: $tablet) {
+        margin: 15px 0;
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      width: 100%;
+
+      &:nth-child(3) {
+        h3 {
+          line-height: 23px;
+          margin-bottom: 0;
+        }
+
+        padding-bottom: 51px;
+      }
+    }
+
+    p {
+      margin-top: 0;
+      font-family: "PT Mono", sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+      color: #666666;
+      height: 100%;
+      flex-grow: 1;
+
+      @media (max-width: $tablet) {
+        margin-bottom: 0;
+      }
+    }
+
+    svg {
+      fill: $blueBackground;
+    }
+
+    &:hover {
+      background: $blueBackground;
+      border: 1px solid $blueBackground;
+      border-left: 2px solid $blueBackground;
+
+      transition: background 0.3s linear;
+
+      h3 {
+        color: $text;
+      }
+
+      p {
+        color: $text;
+        height: 100%;
+      }
+
+      svg {
+        fill: $text;
+      }
+    }
+  }
+}

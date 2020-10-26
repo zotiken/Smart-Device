@@ -1,0 +1,110 @@
+.feedback-form {
+  position: relative;
+  color: $text;
+  background-color: $blueBackground;
+  box-sizing: border-box;
+  background-image: url("../img/triangles.svg"), url("../img/triangle-left-white.svg"), url("../img/triangle-right-white.svg");
+  background-position: 15% 50%, 99.3% 10%, 105.3% 108%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 60px 0;
+  padding-bottom: 95px;
+
+  @media (max-width: $desktop) {
+    background-image: none;
+    padding: 49px 0;
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: $tablet) {
+    background-image: none;
+    padding: 33px 0;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    align-self: start;
+    font-size: 32px;
+    line-height: 51px;
+
+    @media (max-width: $tablet) {
+      font-size: 28px;
+      line-height: 36px;
+      margin-top: 0;
+    }
+  }
+
+  p {
+    align-self: start;
+    margin-bottom: 44px;
+
+    @media (max-width: $desktop) {
+      margin-bottom: 47px;
+    }
+
+    @media (max-width: $tablet) {
+      line-height: 22px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__wrapper {
+    margin-left: 42px;
+
+    @media (max-width: $desktop) {
+      margin-left: 0;
+    }
+  }
+
+  &__image {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translate(0, -50%);
+
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__form {
+    margin-left: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    @media (max-width: $desktop) {
+      width: 100%;
+      padding: 0 65px;
+    }
+
+    @media (max-width: $tablet) {
+      padding: 0;
+    }
+
+    input,
+    textarea {
+      color: $text;
+      margin: 10px 0;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      box-sizing: border-box;
+      padding: 17px 16px;
+
+      &::placeholder {
+        color: $text;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

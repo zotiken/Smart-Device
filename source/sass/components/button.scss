@@ -1,0 +1,43 @@
+.button {
+  box-sizing: border-box;
+  display: block;
+  transition: background-color 0.3s linear;
+  border: 1px solid $text;
+  border-radius: 5px;
+  background: none;
+  padding: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $text;
+  font-size: 14px;
+
+  &:hover {
+    transition: background-color 0.5s linear;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &--blue {
+    border: 1px solid $blueBackground;
+    color: $blueBackground;
+
+    &:hover {
+      transition: color 0.5s linear;
+      background-color: rgba(0, 178, 255, 0.3);
+    }
+  }
+
+  &--blue_fill {
+    box-sizing: border-box;
+    border: 1px solid $blueBackground;
+    background-color: $blueBackground;
+    color: $text;
+
+    &:hover {
+      transition: background-color 0.5s linear;
+      background-color: rgba(0, 178, 255, 0.3);
+    }
+  }
+}

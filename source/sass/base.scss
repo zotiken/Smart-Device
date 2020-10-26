@@ -2,12 +2,12 @@
 
 .visually-hidden {
   position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  padding: 0;
   border: 0;
-  height: 1px;
+  padding: 0;
   width: 1px;
+  height: 1px;
   overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
 }
 
 img {
@@ -18,29 +18,38 @@ img {
 
 body {
   box-sizing: border-box;
-  font-family: "Blogger Sans", "Arial", "Helvetica", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: #161c35;
+  padding: 0;
+  min-width: 320px;
+  font-family: "PT Mono", "Arial", "Helvetica", sans-serif;
   font-size: 16px;
   font-weight: normal;
-  background: #161c35;
-  min-width: 320px;
-  margin: 0;
-
-  // @media (min-width: @screen-md) {
-  //   font-weight: 700;
-  //   font-size: 24px;
-  // }
-
-  // @media (min-width: @screen-xl) {
-  //   font-size: 24px;
-  // }
 }
 
 h1 {
-  color: $text;
   text-transform: uppercase;
+  color: $text;
 }
 
-a button {
+html {
+  font-family: "scroll-behavior: smooth", sans-serif;
+  scroll-behavior: smooth;
+  --scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a,
+button {
   font-family: "Roboto Condensed", sans-serif;
 }
 
@@ -51,7 +60,7 @@ ul {
   & li {
     margin: 0;
     padding: 0;
-    text-decoration: none;
     list-style: none;
+    text-decoration: none;
   }
 }

@@ -1,0 +1,177 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  width: 100%;
+  color: $text;
+
+  @media (max-width: $desktop) {
+    padding: 20px 0;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 17px 0;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+
+    @media (max-width: $desktop) {
+      width: 75%;
+    }
+
+    @media (max-width: $tablet) {
+      svg {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    box-sizing: border-box;
+    margin: 0 20px;
+    border-top: 1px solid $text;
+    border-bottom: 1px solid $text;
+    width: 37px;
+    height: 13px;
+
+    @media (max-width: $desktop) {
+      margin: 0;
+      margin-left: 10px;
+      width: 56px;
+    }
+  }
+
+  &__feedback {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    min-width: max-content;
+
+    @media (max-width: $desktop) {
+      width: 15%;
+    }
+  }
+}
+
+.logo {
+  &__name {
+    margin-left: 16px;
+    display: block;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+
+    p {
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+
+      color: $lightText;
+    }
+  }
+}
+
+.feedback {
+  a {
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 18px;
+    font-family: "PT Mono", sans-serif;
+    font-size: 16px;
+
+    @media (max-width: $tablet) {
+      margin-left: 7px;
+    }
+  }
+
+  &__mail {
+    margin-left: 20px;
+
+    @media (max-width: $tablet) {
+      margin-left: 7px;
+    }
+
+    a {
+      color: $text;
+      text-decoration: none;
+
+
+      svg {
+        fill: $blueBackground;
+      }
+    }
+
+    @media (max-width: $desktop) {
+      margin-left: 12px;
+
+      span {
+        display: none;
+      }
+
+      a {
+        svg {
+          width: 25px;
+          height: 20px;
+          fill: $blueBackground;
+        }
+      }
+    }
+  }
+
+  &__phone {
+    margin-left: 20px;
+
+    a {
+      color: $text;
+      text-decoration: none;
+
+      svg {
+        fill: $blueBackground;
+      }
+    }
+
+    @media (max-width: $desktop) {
+      margin-left: 14px;
+
+      span {
+        display: none;
+      }
+
+      a {
+        svg {
+          width: 25px;
+          height: 25px;
+          fill: $blueBackground;
+        }
+      }
+    }
+  }
+
+  &__order {
+    display: block;
+    margin-left: 20px;
+
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+}

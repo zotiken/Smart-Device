@@ -1,14 +1,3 @@
-// BASE =====================================
-// $white: #fff;
-// $black: #000;
-
-// $accent: #FF1A53;
-// $darkAccent: #ff3366;
-
-// $main: #295fcc;
-// $darkMain: #2454b3;
-
-// $second: #eff2f7;
 
 // BACKGROUND =====================================
 $darkBackground: #1b2d37;
@@ -17,16 +6,18 @@ $blueBackground: #00b2ff;
 
 // TEXT =====================================
 $text: #ffffff;
-// $darkText: #3D4B66;;
 $lightText: #788891;
 
 // BORDER =====================================
-// $border: #e0e6ed;
 $darkBorder: rgba(98, 105, 98, 0.2);
-// $lightBorder: #eff2f7;
 
 // media =====================================
 
 $desktop: 1024px;
 $tablet: 767px;
 $mobile: 320px;
+
+// retina
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

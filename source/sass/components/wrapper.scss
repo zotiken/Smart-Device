@@ -1,0 +1,23 @@
+.wrapper {
+  width: 73.5%;
+
+  @media (max-width: $desktop) {
+    width: 93.5%;
+  }
+
+  @media (max-width: $tablet) {
+    width: 89.4%;
+  }
+
+  &--main {
+    width: 61%;
+
+    @media (max-width: $desktop) {
+      width: 93.5%;
+    }
+
+    @media (max-width: $tablet) {
+      width: 89.4%;
+    }
+  }
+}
