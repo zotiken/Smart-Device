@@ -1,23 +1,35 @@
 .wrapper {
   width: 73.5%;
+  min-width: 984px;
 
   @media (max-width: $desktop) {
     width: 93.5%;
+    min-width: auto;
   }
 
   @media (max-width: $tablet) {
     width: 89.4%;
+    min-width: auto;
   }
 
   &--main {
     width: 61%;
+    min-width: 974px;
 
     @media (max-width: $desktop) {
       width: 93.5%;
+      min-width: auto;
     }
 
     @media (max-width: $tablet) {
       width: 89.4%;
+      min-width: auto;
     }
+  }
+
+  &--full {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }

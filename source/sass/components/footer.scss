@@ -6,8 +6,12 @@
   flex-direction: column;
 
   &__wrapper {
+
+    border-top: 1px solid rgba(98, 105, 98, 0.2);
+
     @media (max-width: $desktop) {
       width: 100%;
+      border: none;
     }
 
     @media (max-width: $tablet) {
@@ -16,7 +20,8 @@
   }
 
   &__nav_footer {
-    padding: 45px 0;
+    padding: 53px 0;
+    padding-bottom: 59px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -34,6 +39,7 @@
 
   &__copyright {
     display: block;
+    width: 11%;
 
     @media (max-width: $desktop) {
       display: none;
@@ -43,11 +49,13 @@
   &__dev {
     width: 37%;
     color: rgba(27, 45, 55, 0.5);
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", "Times New Roman", serif;
     text-align: right;
 
     @media (max-width: $tablet) {
       margin: 20px 0;
+      margin-top: 0;
+
       width: 100%;
       text-align: center;
     }
@@ -55,7 +63,7 @@
 
   &__confidentiality {
     color: rgba(27, 45, 55, 0.5);
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", "Times New Roman", serif;
 
     @media (max-width: $tablet) {
       margin: 20px 0;
@@ -63,11 +71,12 @@
   }
 
   &__info {
+    white-space: nowrap;
     box-sizing: border-box;
     color: rgba(27, 45, 55, 0.5);
-    font-family: "PT Mono", sans-serif;
-    padding: 20px 0;
-    width: 100%;
+    font-family: "PT Mono", "Times New Roman", serif;
+    padding: 0;
+    width: 73.5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -79,16 +88,19 @@
     @media (max-width: $desktop) {
       border-top: 1px solid #acaaaa;
       padding: 20px 26px;
+      width: 100%;
     }
 
     @media (max-width: $tablet) {
       flex-direction: column;
       border-top: 1px solid $darkBorder;
+      padding: 8px 26px;
     }
   }
 
   &__date {
     display: block;
+    width: 22%;
 
     @media (max-width: $desktop) {
       display: none;
@@ -107,7 +119,7 @@
     text-decoration: none;
 
     @media (max-width: $tablet) {
-      margin-bottom: 26px;
+      margin-bottom: 10px;
 
       .logo__name {
         display: block;
@@ -140,6 +152,8 @@
 
       p {
         display: block;
+        width: 33%;
+        margin-left: 15px;
       }
     }
 
@@ -151,6 +165,9 @@
 
       p {
         display: block;
+        width: 100%;
+        margin-bottom: 31px;
+        margin-left: 37px;
       }
     }
 
@@ -161,14 +178,27 @@
 
   &__social {
     display: flex;
-    margin-top: 65px;
+    margin-top: 51px;
+    align-self: flex-start;
 
     @media (max-width: $desktop) {
       margin: 0;
+      align-self: center;
+      width: 15.3%;
+      justify-content: space-between;
     }
+
+    @media (max-width: $tablet) {
+      width: 40%;
+    }
+
 
     li {
       margin-right: 15px;
+
+      @media (max-width: $desktop) {
+        margin: 0;
+      }
     }
 
     svg {
@@ -183,10 +213,10 @@
   }
 
   &__navigation {
-    margin-top: 18px;
+    margin-top: 12px;
     display: flex;
     justify-content: flex-end;
-    width: 70%;
+    width: 70.3%;
     box-sizing: border-box;
 
     @media (max-width: $tablet) {
@@ -196,9 +226,10 @@
     h3 {
       color: #1b2d37;
       margin: 0;
+      letter-spacing: 0.2px;
       padding-bottom: 28px;
       text-transform: uppercase;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 16px;
 
       @media (max-width: $tablet) {
@@ -211,18 +242,17 @@
 
     @media (max-width: $desktop) {
       width: 100%;
-      padding: 20px 26px;
+      padding: 25px 26px;
       padding-bottom: 35px;
     }
 
     @media (max-width: $tablet) {
       flex-direction: column;
       padding: 20px 0;
-      padding-bottom: 35px;
+      padding-bottom: 27px;
     }
 
     ul {
-      height: 93px;
       width: auto;
       display: flex;
       flex-direction: column;
@@ -240,7 +270,7 @@
       }
 
       li {
-        line-height: 23px;
+        line-height: 24px;
         font-size: 15px;
 
         @media (max-width: $desktop) {
@@ -258,15 +288,18 @@
     flex-direction: column;
 
     ul {
-      width: 523px;
+      width: 500px;
+      height: 96px;
 
       @media (max-width: $desktop) {
         width: 100%;
+        height: auto;
       }
     }
 
     @media (max-width: $desktop) {
       align-items: flex-start;
+      width: 56%;
     }
 
     @media (max-width: $tablet) {
@@ -279,6 +312,7 @@
 
       @media (max-width: $tablet) {
         align-self: flex-start;
+        padding: 28px 15px;
 
         &::before {
           display: block;
@@ -293,6 +327,10 @@
           position: absolute;
           right: 20px;
           top: 50%;
+        }
+
+        &.hidden {
+          cursor: pointer;
         }
 
         &.hidden::before {
@@ -325,7 +363,7 @@
   }
 
   &__contacts {
-    width: 47%;
+    width: 51%;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -344,6 +382,7 @@
 
       @media (max-width: $tablet) {
         align-self: flex-start;
+        padding: 28px 15px;
 
 
         &::before {
@@ -359,6 +398,10 @@
           position: absolute;
           right: 20px;
           top: 50%;
+        }
+
+        &.hidden {
+          cursor: pointer;
         }
 
         &.hidden::before {
@@ -381,7 +424,8 @@
       ul {
         display: flex;
         align-items: flex-start;
-        width: 93%;
+        width: 89%;
+        height: auto;
 
         &.hidden {
           display: none;
@@ -390,11 +434,12 @@
     }
 
     li {
+      min-width: 180px;
       line-height: 20px;
       font-size: 15px;
       color: rgba(27, 45, 55, 0.5);
-      font-family: "PT Mono", sans-serif;
-      white-space: nowrap;
+      font-family: "PT Mono", "Times New Roman", serif;
+      // white-space: nowrap;
 
       @media (max-width: $tablet) {
         white-space: pre-wrap;
@@ -404,6 +449,6 @@
 
   &__link {
     color: rgba(27, 45, 55, 0.5);
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", "Times New Roman", serif;
   }
 }

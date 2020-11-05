@@ -27,8 +27,9 @@
 
   body.classList.remove('no-js');
 
-  var collapseMake = function (block) {
-    block.querySelector('h3').addEventListener('click', function (e) {
+  var accordionItems = [footerNav, footerContacts];
+  accordionItems.forEach(function (item, i) {
+    item.querySelector('h3').addEventListener('click', function (e) {
       if (e.target.classList[0] === HIDDEN) {
         e.target.classList.remove(HIDDEN);
         e.target.classList.add(VISIBLE);
@@ -40,29 +41,42 @@
         e.target.parentNode.querySelector('ul').classList.remove(VISIBLE);
         e.target.parentNode.querySelector('ul').classList.add(HIDDEN);
       }
-    });
-  };
 
-  collapseMake(footerNav);
-  collapseMake(footerContacts);
+      var action = function (a, id) {
+        if (id !== i) {
+          a.querySelector('h3').classList.remove(VISIBLE);
+          a.querySelector('h3').classList.add(HIDDEN);
+          a.querySelector('ul').classList.remove(VISIBLE);
+          a.querySelector('ul').classList.add(HIDDEN);
+        }
+      };
+      accordionItems.map(function (r, index) {
+        return action(r, index);
+      });
+    });
+  });
 
   callBackBotton.addEventListener('click', function () {
     popUp.style.display = FLEX;
     popUp.querySelector('input[name="name"]').focus();
+    body.style.overflow = 'hidden';
   });
 
   document.addEventListener('keydown', function (e) {
     if (e.keyCode === ESC) {
       popUp.style.display = NONE;
+      body.style.overflow = 'auto';
     }
   });
 
   modalOverlay.addEventListener('click', function () {
     popUp.style.display = NONE;
+    body.style.overflow = 'auto';
   });
 
   modalClose.addEventListener('click', function () {
     popUp.style.display = NONE;
+    body.style.overflow = 'auto';
   });
 
   document.querySelectorAll('input[name="phone"]').forEach(function (item) {
@@ -73,9 +87,8 @@
 
   document.querySelectorAll('form').forEach(function (form) {
     var content = form.id;
-    var itemArray = localStorage.getItem(content)
-      ? JSON.parse(localStorage.getItem(content))
-      : {};
+    var itemArray = localStorage.getItem(content) ?
+      JSON.parse(localStorage.getItem(content)) : {};
 
     form.querySelectorAll('[data-type="local"]').forEach(function (item) {
       if (localStorage.getItem(content)) {

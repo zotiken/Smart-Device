@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 33px;
+  padding-top: 31px;
   padding-bottom: 33px;
   width: 100%;
   color: $text;
@@ -26,6 +26,8 @@
     }
 
     @media (max-width: $tablet) {
+      width: 50%;
+
       svg {
         width: 38px;
         height: 38px;
@@ -40,17 +42,18 @@
   }
 
   &__menu {
+    margin-right: auto;
     box-sizing: border-box;
-    margin: 0 20px;
+    margin-left: 117px;
     border-top: 1px solid $text;
     border-bottom: 1px solid $text;
+    min-width: 20px;
     width: 37px;
     height: 13px;
 
     @media (max-width: $desktop) {
-      margin: 0;
-      margin-left: 10px;
-      width: 56px;
+      margin: 0 0 8px -4px;
+      width: 36px;
     }
   }
 
@@ -58,17 +61,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 50%;
+    width: 46.8%;
     min-width: max-content;
 
     @media (max-width: $desktop) {
-      width: 15%;
+      width: 13%;
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: $tablet) {
+      width: 30%;
+      margin-bottom: 5px;
     }
   }
 }
 
 .logo {
   &__name {
+    padding-top: 5px;
     margin-left: 16px;
     display: block;
 
@@ -92,10 +102,11 @@
 .feedback {
   a {
     white-space: nowrap;
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     line-height: 18px;
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", "Times New Roman", serif;
     font-size: 16px;
 
     @media (max-width: $tablet) {
@@ -104,7 +115,7 @@
   }
 
   &__mail {
-    margin-left: 20px;
+    width: 20%;
 
     @media (max-width: $tablet) {
       margin-left: 7px;
@@ -114,8 +125,13 @@
       color: $text;
       text-decoration: none;
 
+      span {
+        margin-left: 10px;
+      }
+
 
       svg {
+        flex-shrink: 0;
         fill: $blueBackground;
       }
     }
@@ -138,13 +154,20 @@
   }
 
   &__phone {
-    margin-left: 20px;
+    width: 32%;
+    margin-left: 60px;
 
     a {
       color: $text;
       text-decoration: none;
 
+      span {
+        margin-left: 9px;
+      }
+
+
       svg {
+        flex-shrink: 0;
         fill: $blueBackground;
       }
     }
@@ -169,6 +192,7 @@
   &__order {
     display: block;
     margin-left: 20px;
+    white-space: nowrap;
 
     @media (max-width: $desktop) {
       display: none;

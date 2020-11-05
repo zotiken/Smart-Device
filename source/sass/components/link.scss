@@ -4,8 +4,12 @@
   transition: color 0.5s linear;
 
   &:hover {
-    color: #eeeeee;
+    color: #66b2f0;
     transition: color 0.5s linear;
+
+    svg {
+      fill: #ffffff;
+    }
   }
 
   &--dark {
@@ -14,6 +18,10 @@
     &:hover {
       color: #000000;
       transition: color 0.2s linear;
+
+      svg {
+        fill: #ffffff;
+      }
     }
   }
 }

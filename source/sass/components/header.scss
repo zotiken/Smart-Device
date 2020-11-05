@@ -22,8 +22,9 @@
   }
 
   @media (max-width: $desktop) {
-    background-position: right 33%, 456px 82px, center top;
-    background-size: auto 50%, auto 56%, cover;
+    background-position: 165% 33%, 457px 82px, center top;
+    background-size: auto 49%, auto 56%, cover;
+    height: 686px;
   }
 
   @media (max-width: $desktop) and (min-resolution: $retina-dpi),
@@ -34,10 +35,14 @@
   }
 
   @media (max-width: $tablet) {
-    background-position: 88% 22%, 171px 76px, center top;
+    background-image: url("../img/boards-mobile@2x.png"),
+      url("../img/triangles.svg"),
+      url("../img/background-mobile@1x.png");
+    background-position: 130% 22%, 171px 76px, center top;
     background-size: auto 34%, auto 55%, cover;
     padding-right: 0;
     padding-left: 0;
+    height: 647px;
   }
 
   @media (max-width: $tablet) and (min-resolution: $retina-dpi),

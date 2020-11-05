@@ -6,18 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Smart Device</title>
-  <link rel="preload" href="fonts/pt-mono-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-300.woff" as="font"  type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/pt-mono-v8-latin-regular.woff2" as="font"  type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body class="no-js">
-    <include style="display: none" src="build/img/sprite_auto.svg"></include>
+  <div style="display: none">
+    <include  src="build/img/sprite_auto.svg"></include>
+  </div>
   <header class="header">
     <nav class="header_nav nav">
       <div class="nav__wrapper wrapper">
-        <a href="/" class="nav__logo logo">
+        <a class="nav__logo logo">
           <div>
             <svg width="52" height="52">
               <use xlink:href="#icon-brain"></use>
@@ -32,14 +37,14 @@
         <div class="nav__menu"></div>
         <ul class="nav__feedback feedback">
           <li class="feedback__mail">
-            <a href="mailto:info@sd.ru">
+            <a class="feedback__link link" href="mailto:info@sd.ru">
               <svg width="19px" height="14px">
                 <use xlink:href="#icon-email"></use>
               </svg>
               <span>info@sd.ru</span></a>
           </li>
           <li class="feedback__phone">
-            <a href="tel:+74950005252">
+            <a class="feedback__link link" href="tel:+74950005252">
               <svg width="18px" height="18px">
                 <use xlink:href="#icon-phone"></use>
               </svg>
@@ -68,7 +73,7 @@
             </a>
           </div>
         </div>
-        <a class="banner__scroll" href="#features">Скролл вниз</a>
+        <a class="banner__scroll link" href="#features" tabindex=0 >Скролл вниз</a>
       </div>
     </div>
   </header>
@@ -143,11 +148,11 @@
                 " type="image/webp" />
 
             <source srcset="
-                  ./img/2005-tablet@1x.png 1x,
-                  ./img/2005-tablet@2x.png 2x
+                  ./img/2005-tablet@1x.jpg 1x,
+                  ./img/2005-tablet@2x.jpg 2x
                 " media="(max-width: 1023px)" />
             <!--  115px; 2x: 229px -->
-            <img src="./img/2005-desktop@1x.png" srcset="./img/2005-desktop@2x.png 2x" width="115" height="305"
+            <img src="./img/2005-desktop@1x.jpg" srcset="./img/2005-desktop@2x.jpg 2x" width="115" height="305" loading="lazy"
               alt="2005" />
           </picture>
           <div class="about__content">
@@ -198,16 +203,16 @@
                     " type="image/webp" />
                 <!-- 290px; 2x: 580px -->
                 <source media="(max-width: 767px)" srcset="
-                      ./img/production-mobile@1x.png 1x,
-                      ./img/production-mobile@2x.png 2x
+                      ./img/production-mobile@1x.jpg 1x,
+                      ./img/production-mobile@2x.jpg 2x
                     " />
                 <!-- 720px; 2x: 1440px -->
                 <source media="(max-width: 1023px)" srcset="
-                      ./img/production-tablet@1x.png 1x,
-                      ./img/production-tablet@2x.png 2x
+                      ./img/production-tablet@1x.jpg 1x,
+                      ./img/production-tablet@2x.jpg 2x
                     " />
                 <!-- 370px; 2x: 740px -->
-                <img src="./img/production-desktop@1x.png " srcset="./img/production-desktop@2x.png 2x" width="370"
+                <img src="./img/production-desktop@1x.jpg " srcset="./img/production-desktop@2x.jpg 2x" loading="lazy" width="370"
                   height="620" alt="Печатные платы" />
               </picture>
             </a>
@@ -246,7 +251,7 @@
                     " />
                 <!-- 370px; 2x: 740px -->
 
-                <img src="./img/assembling-desktop@1x.png" srcset="./img/assembling-desktop@2x.png 2x" width="370"
+                <img src="./img/assembling-desktop@1x.png" srcset="./img/assembling-desktop@2x.png 2x" loading="lazy" width="370"
                   height="620" alt="Микросхемы" />
               </picture>
             </a>
@@ -285,7 +290,7 @@
                     " />
                 <!-- 370px; 2x: 740px -->
 
-                <img src="./img/components-desktop@1x.png" srcset="./img/components-desktop@2x.png 2x" width="370"
+                <img src="./img/components-desktop@1x.png" srcset="./img/components-desktop@2x.png 2x" loading="lazy" width="370"
                   height="620" alt="Светодиодная лента" />
               </picture>
             </a>
@@ -297,28 +302,34 @@
       <div class="feedback-form__wrapper wrapper wrapper--main">
         <picture class="feedback-form__image">
           <source  srcset="./img/airplane@1x.webp 1x, ./img/airplane@2x.webp 2x" type="image/webp" />
-          <img src="./img/airplane@1x.png" srcset="./img/airplane@1x.png 2x" width="511" height="288"
+          <img src="./img/airplane@1x.png" srcset="./img/airplane@1x.png 2x" loading="lazy" width="511" height="288"
             alt="Бумажный самолет" />
         </picture>
         <form class="feedback-form__form form" id="form_feedback">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
           <div class="form__container">
-            <input type="text" name="name" placeholder="Имя" data-type="local" />
-            <input type="text" name="phone" maxlength="16" data-type="local" placeholder="Телефон" />
+            <label class="visually-hidden" for="feedback_name">имя</label>
+            <label class="visually-hidden" for="feedback_phone">телефон</label>
+
+            <input type="text" name="name" placeholder="Имя" data-type="local" id="feedback_name" required />
+            <input type="text" name="phone" maxlength="16" data-type="local" placeholder="Телефон"  id="feedback_phone"  required/>
           </div>
-          <textarea name="text" data-type="local" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+          <label class="visually-hidden" for="feedback_text">телефон</label>
+
+          <textarea name="text" data-type="local" cols="30" rows="10" placeholder="Ваш вопрос" id="feedback_text" ></textarea>
           <div class="form__container form__container--submit">
-            <button class="form__button button" type="submit">
-              Задать вопрос
-            </button>
-            <label>
-              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" />
+            <label tabindex=0>
+              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required />
               <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0.5" y="0.5" width="15" height="15" stroke="white"></rect>
                 </svg></span>
               Я согласен на обработку персональных данных
             </label>
+            <button class="form__button button" type="submit">
+              Задать вопрос
+            </button>
+
           </div>
         </form>
       </div>
@@ -328,7 +339,7 @@
     <div class="footer__wrapper wrapper">
       <div class="footer__nav_footer nav_footer">
         <div class="nav_footer__container">
-          <a href="/" class="nav_footer__logo logo">
+          <a  class="nav_footer__logo logo">
             <div>
               <svg width="52" height="52">
                 <use xlink:href="#icon-brain"></use>
@@ -395,16 +406,16 @@
           <div class="nav_footer__contacts">
             <h3>Наш офис</h3>
             <ul>
-              <li>г. Мытищи, Олимпийский проспект, д.10</li>
-              <li>+7 (495) 589-40-50</li>
-              <li>+7 (925) 003-87-67</li>
-              <li>+7 (926) 926-080-79</li>
+              <li><a  class="nav_footer__link link link--dark" href="#">г. Мытищи, Олимпийский проспект, д.10</a></li>
+              <li><a class="nav_footer__link link link--dark" href="tel:+74955894050">+7 (495) 589-40-50</a></li>
+              <li><a class="nav_footer__link link link--dark" href="tel:+79250038767">+7 (925) 003-87-67</a></li>
+              <li><a class="nav_footer__link link link--dark" href="tel:+792692608079">+7 (926) 926-080-79</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer__wrapper wrapper">
+    <div class="footer__wrapper wrapper wrapper--full">
       <div class="footer__info">
         <p class="footer__copyright">Все права защищены</p>
         <p class="footer__date">1999-2018 SD Service Devices</p>
@@ -423,23 +434,28 @@
         Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
       </p>
       <div class="form__container form__container--modal">
-        <input type="text" name="name" placeholder="Имя" autofocus="" data-type="local" />
-        <input type="text" name="phone" maxlength="16" placeholder="Телефон" data-type="local"/>
+        <label class="visually-hidden" for="modal_name">имя</label>
+        <label class="visually-hidden" for="modal_phone">телефон</label>
+
+        <input type="text" name="name" placeholder="Имя" autofocus="" data-type="local"  id="modal_name" required/>
+        <input type="text" name="phone" maxlength="16" placeholder="Телефон" data-type="local" id="modal_phone" required/>
       </div>
-      <textarea name="text" data-type="local" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-      <div class="form__container form__container--submit form__container--modal">
-        <button class="form__button modal__button button" type="submit">
-          Задать вопрос
-        </button>
-        <label>
-          <input class="visually-hidden" type="checkbox" name="agreement_modal" id="agreement_modal" />
+      <label class="visually-hidden" for="modal_text">Тект</label>
+
+      <textarea name="text" data-type="local" cols="30" rows="10" placeholder="Ваш вопрос" id="modal_text"></textarea>
+      <div class="form__container form__container--submit_modal form__container--modal">
+        <label tabindex=0>
+          <input class="visually-hidden" type="checkbox" name="agreement_modal" id="agreement_modal" required />
           <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="0.5" y="0.5" width="15" height="15" stroke="white"></rect>
             </svg></span>
           Я согласен на обработку персональных данных
         </label>
+        <button class="form__button modal__button button" type="submit">
+          Задать вопрос
+        </button>
       </div>
-      <div class="modal__close">
+      <div class="modal__close" tabindex=0>
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M0.146522 0.853553C-0.04874 0.658291 -0.04874 0.341709 0.146522 0.146447C0.341784 -0.0488155 0.658367 -0.0488156 0.853629 0.146447L8.27821 7.57103L15.7028 0.14645C15.8981 -0.0488124 16.2146 -0.0488125 16.4099 0.14645C16.6052 0.341712 16.6052 0.658294 16.4099 0.853556L8.98532 8.27814L16.41 15.7028C16.6052 15.8981 16.6052 16.2146 16.41 16.4099C16.2147 16.6052 15.8981 16.6052 15.7029 16.4099L8.27821 8.98525L0.853553 16.4099C0.658291 16.6052 0.341709 16.6052 0.146447 16.4099C-0.0488155 16.2146 -0.0488156 15.8981 0.146447 15.7028L7.57111 8.27814L0.146522 0.853553Z"

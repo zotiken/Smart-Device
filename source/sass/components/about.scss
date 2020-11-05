@@ -1,36 +1,57 @@
 .about {
   display: flex;
-  margin-top: 108px;
+  margin-top: 79px;
 
   @media (max-width: $desktop) {
     margin-top: 28px;
   }
 
+  @media (max-width: $tablet) {
+    margin-top: 43px;
+  }
+
+
   &__content {
-    width: 100%;
+    width: 96%;
+    margin-left: 60px;
+
+    @media (max-width: $desktop) {
+      margin-left: 52px;
+    }
+
+    @media (max-width: $tablet) {
+      margin-left: 0;
+      width: 100%;
+    }
   }
 
   &__title {
     font-size: 36px;
     font-weight: 400;
     color: #666666;
-    letter-spacing: -1px;
-    margin: 4px 0 28px 0;
+    margin: 0 0 28px 0;
+
+    @media (max-width: $desktop) {
+      letter-spacing: -0.9px;
+      margin-left: -5px;
+      font-weight: 300;
+    }
 
     @media (max-width: $tablet) {
       font-size: 30px;
+      font-weight: 400;
+      margin-bottom: 22px;
     }
   }
 
   img {
-    margin-left: -27px;
-    width: 220px;
-    height: 320px;
+    width: 140px;
+    height: 311px;
 
     @media (max-width: $desktop) {
-      margin-left: -28px;
-      width: 248px;
-      height: 366px;
+      // margin-left: -28px;
+      width: 177px;
+      height: 353px;
     }
   }
 
@@ -51,33 +72,48 @@
   }
 
   p {
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", "Times New Roman", serif;
     font-size: 16px;
     line-height: 22px;
     color: #666666;
     display: flex;
     align-items: flex-end;
 
+    @media (max-width: $desktop) {
+      margin-bottom: 19px;
+    }
+
+    @media (max-width: $tablet) {
+      width: 101%;
+    }
+
+
     &:nth-child(3) {
+      margin-top: 0;
       display: inline-block;
       vertical-align: middle;
 
       @media (max-width: $tablet) {
         margin-bottom: 28px;
-        margin-top: 40px;
+        margin-top: 20px;
         width: 105%;
       }
     }
   }
 
   &__link {
-    margin-top: 40px;
+    margin-top: 25px;
     width: max-content;
-    padding: 14px 43px;
+    padding: 14px 50px;
+
+    @media (max-width: $desktop) {
+      margin-top: 0;
+    }
+
 
     @media (max-width: $tablet) {
-      margin-top: 27px;
-      padding: 14px 51px;
+      margin-top: 1px;
+      padding: 14px 50px;
     }
   }
 
