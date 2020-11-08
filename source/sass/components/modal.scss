@@ -9,68 +9,68 @@
   align-items: center;
   overflow-y: hidden;
   justify-content: center;
+}
 
-  &__overlay {
-    z-index: 998;
-    position: absolute;
-    width: 100%;
-    background-color: rgba(27, 45, 55, 0.5);
-    height: 100%;
+.modal__overlay {
+  z-index: 998;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(27, 45, 55, 0.5);
+  height: 100%;
+}
+
+.modal__form {
+  position: relative;
+  z-index: 999;
+  padding: 20px;
+  background-color: $blueBackground;
+  display: flex;
+  width: 490px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__form h2 {
+  color: $text;
+  align-self: flex-start;
+}
+
+.modal__form p {
+  color: $text;
+}
+
+.modal__form input,
+textarea {
+  color: $text;
+  margin: 10px 0;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  padding: 17px 16px;
+
+  &::placeholder {
+    color: $text;
   }
+}
 
-  &__form {
-    position: relative;
-    z-index: 999;
-    padding: 20px;
-    background-color: $blueBackground;
-    display: flex;
-    width: 490px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.modal__button {
+  margin-top: 20px;
 
-    h2 {
-      color: $text;
-      align-self: flex-start;
-    }
+  width: 100%;
+  margin-bottom: 34px;
+}
 
-    p {
-      color: $text;
-    }
+.modal__close {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
 
-    input,
-    textarea {
-      color: $text;
-      margin: 10px 0;
-      border: none;
-      background-color: rgba(255, 255, 255, 0.2);
-      box-sizing: border-box;
-      padding: 17px 16px;
-
-      &::placeholder {
-        color: $text;
-      }
-    }
-  }
-
-  &__button {
-    margin-top: 20px;
-
-    width: 100%;
-    margin-bottom: 34px;
-  }
-
-  &__close {
-    position: absolute;
-    cursor: pointer;
-    top: 20px;
-    right: 20px;
-
-    &:hover {
-      svg {
-        path {
-          fill: $text;
-        }
+  &:hover {
+    svg {
+      path {
+        fill: $text;
       }
     }
   }

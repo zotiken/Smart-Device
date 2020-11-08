@@ -8,135 +8,135 @@
   @media (max-width: $tablet) {
     min-width: auto;
   }
+}
 
-  &__container {
-    width: 100%;
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: space-between;
-    align-items: center;
+.form__container {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
 
-    @media (max-width: $desktop) {
-      margin-bottom: 25px;
-    }
+  @media (max-width: $desktop) {
+    margin-bottom: 25px;
+  }
 
-    @media (max-width: $tablet) {
-      flex-direction: column;
-      margin-bottom: 13px;
-    }
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    margin-bottom: 13px;
+  }
+
+  &--modal {
+    flex-direction: column;
 
     input {
-      width: 47%;
-
-      @media (max-width: $tablet) {
-        width: 100%;
-
-        &:nth-child(1) {
-          margin-bottom: 25px;
-        }
-      }
+      width: 100%;
     }
 
     label {
-      color: rgba(255, 255, 255, 0.8);
-      font-family: " PT Mono", sans-serif;
-      font-size: 14px;
-      line-height: 16px;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      width: 46%;
-      letter-spacing: 1.4px;
-      text-align: left;
+      width: 100%;
+    }
+  }
 
-      @media (max-width: $tablet) {
-        width: 100%;
-      }
+  &--submit_modal {
+    flex-direction: column-reverse;
+  }
 
-      span {
-        display: block;
-        position: relative;
-        padding-right: 16px;
-      }
 
-      span::before {
-        display: none;
-        left: 0;
-        top: 0;
-        transform: translate(20%, 0);
-        position: absolute;
-        content: "";
-        background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 2L3.5 5L8 0.5' stroke='white'/%3E%3C/svg%3E");
-        width: 16px;
-        height: 16px;
-      }
+  &--submit {
+    flex-direction: row-reverse;
 
-      input {
-        margin: 0;
-        width: auto;
-
-        &:checked ~ span::before {
-          display: block;
-        }
+    label {
+      &:hover {
+        cursor: pointer;
       }
     }
 
-    &--modal {
-      flex-direction: column;
-
-      input {
-        width: 100%;
-      }
-
-      label {
-        width: 100%;
-      }
-    }
-
-    &--submit_modal {
+    @media (max-width: $tablet) {
       flex-direction: column-reverse;
     }
-
-
-    &--submit {
-      flex-direction: row-reverse;
-
-      label {
-        &:hover {
-          cursor: pointer;
-        }
-      }
-
-      @media (max-width: $tablet) {
-        flex-direction: column-reverse;
-      }
-    }
   }
+}
 
-  textarea {
+.form__container input {
+  width: 47%;
+
+  @media (max-width: $tablet) {
     width: 100%;
-    max-height: 154px;
-    margin-bottom: 44px;
 
-    @media (max-width: $desktop) {
-      max-height: 160px;
-    }
-
-    @media (max-width: $tablet) {
-      max-height: 103px;
-      margin-bottom: 34px;
-      margin-top: 5px;
+    &:nth-child(1) {
+      margin-bottom: 25px;
     }
   }
+}
 
-  &__button {
-    padding: 13px 10px;
-    width: 47.2%;
+.form__container label {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: " PT Mono", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 46%;
+  letter-spacing: 1.4px;
+  text-align: left;
 
-    @media (max-width: $tablet) {
-      width: 100%;
-      margin-bottom: 28px;
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+
+  span {
+    display: block;
+    position: relative;
+    padding-right: 16px;
+  }
+
+  span::before {
+    display: none;
+    left: 0;
+    top: 0;
+    transform: translate(20%, 0);
+    position: absolute;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 2L3.5 5L8 0.5' stroke='white'/%3E%3C/svg%3E");
+    width: 16px;
+    height: 16px;
+  }
+
+  input {
+    margin: 0;
+    width: auto;
+
+    &:checked ~ span::before {
+      display: block;
     }
+  }
+}
+
+.form textarea {
+  width: 100%;
+  max-height: 154px;
+  margin-bottom: 44px;
+
+  @media (max-width: $desktop) {
+    max-height: 160px;
+  }
+
+  @media (max-width: $tablet) {
+    max-height: 103px;
+    margin-bottom: 34px;
+    margin-top: 5px;
+  }
+}
+
+.form__button {
+  padding: 13px 10px;
+  width: 47.2%;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    margin-bottom: 28px;
   }
 }

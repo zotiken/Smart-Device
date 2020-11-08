@@ -17,7 +17,6 @@ img {
 }
 
 body {
-  // width: 1920px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -32,36 +31,12 @@ body {
   font-weight: normal;
 }
 
-h1 {
-  text-transform: uppercase;
-  color: $text;
-}
-
 html {
   font-family: "scroll-behavior: smooth", sans-serif;
   scroll-behavior: smooth;
   --scroll-behavior: smooth;
 }
 
-h1,
-h2,
-h3 {
+a {
   font-family: "Roboto Condensed", "Arial", sans-serif;
-}
-
-a,
-button {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-
-  & li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-  }
 }

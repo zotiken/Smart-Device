@@ -1,139 +1,137 @@
-.advantages {
-  &__list {
-    overflow: unset;
-    width: 100%;
-    min-height: max-content;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-between;
+.advantages__list {
+  overflow: unset;
+  width: 100%;
+  min-height: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 42px;
+  width: 49%;
+  min-height: 300px;
+  background: $text;
+  border: 1px solid #ebebeb;
+  border-left: 4px solid $blueBackground;
+  margin-bottom: 30px;
+
+  @media (max-width: $desktop) {
+    padding: 24px 24px;
+    width: 48%;
+    min-height: 232px;
   }
 
-  &__item {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 42px;
-    width: 49%;
-    min-height: 300px;
-    background: $text;
-    border: 1px solid #ebebeb;
-    border-left: 4px solid $blueBackground;
-    margin-bottom: 30px;
+  @media (max-width: $tablet) {
+    width: 100%;
+    padding: 21px;
+    margin-bottom: 22px;
+
+    &--provider {
+      padding-right: 10px;
+    }
+
+    &--coast {
+      padding-right: 13px;
+    }
+  }
+
+  h3 {
+    color: $blueBackground;
+    font-size: 22px;
+    margin: 20px 0;
+    font-weight: 300;
+    letter-spacing: 1.2px;
 
     @media (max-width: $desktop) {
-      padding: 24px 24px;
-      width: 48%;
-      min-height: 232px;
+      margin: 10px 0;
+      font-size: 22px;
+      white-space: nowrap;
     }
 
     @media (max-width: $tablet) {
-      width: 100%;
-      padding: 21px;
-      margin-bottom: 22px;
+      margin: 15px 0;
+      font-size: 18px;
+      margin-top: 14px;
+    }
+  }
 
-      &:nth-child(2) {
-        padding-right: 10px;
-      }
-
-      &:nth-child(4) {
-        padding-right: 13px;
+  @media (max-width: $desktop) {
+    &--advantages__item {
+      h3 {
+        margin-bottom: 18px;
       }
     }
+  }
+
+
+  @media (max-width: $tablet) {
+    width: 100%;
+
+    &--confidentiality {
+      h3 {
+        line-height: 26px;
+        margin-top: 10px;
+        margin-bottom: -7px;
+        white-space: pre-wrap;
+      }
+
+      padding-bottom: 51px;
+    }
+
+    &--coast {
+      h3 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-family: "PT Mono", "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: #666666;
+    height: 100%;
+    flex-grow: 1;
+
+    @media (max-width: $desktop) {
+      margin-bottom: -4px;
+    }
+
+    @media (max-width: $tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  svg {
+    fill: $blueBackground;
+  }
+
+  &:hover {
+    background: $blueBackground;
+    border: 1px solid $blueBackground;
+    border-left: 2px solid $blueBackground;
+
+    transition: background 0.3s linear;
 
     h3 {
-      color: $blueBackground;
-      font-size: 22px;
-      margin: 20px 0;
-      font-weight: 300;
-      letter-spacing: 1.2px;
-
-      @media (max-width: $desktop) {
-        margin: 10px 0;
-        font-size: 22px;
-        white-space: nowrap;
-      }
-
-      @media (max-width: $tablet) {
-        margin: 15px 0;
-        font-size: 18px;
-        margin-top: 14px;
-      }
-    }
-
-    @media (max-width: $desktop) {
-      &:nth-child(3) {
-        h3 {
-          margin-bottom: 18px;
-        }
-      }
-    }
-
-
-    @media (max-width: $tablet) {
-      width: 100%;
-
-      &:nth-child(3) {
-        h3 {
-          line-height: 26px;
-          margin-top: 10px;
-          margin-bottom: -7px;
-          white-space: pre-wrap;
-        }
-
-        padding-bottom: 51px;
-      }
-
-      &:nth-child(4) {
-        h3 {
-          margin-bottom: 10px;
-        }
-      }
+      color: $text;
     }
 
     p {
-      margin-top: 0;
-      margin-bottom: 24px;
-      font-family: "PT Mono", "Times New Roman", serif;
-      font-size: 16px;
-      line-height: 22px;
-      color: #666666;
+      color: $text;
       height: 100%;
-      flex-grow: 1;
-
-      @media (max-width: $desktop) {
-        margin-bottom: -4px;
-      }
-
-      @media (max-width: $tablet) {
-        margin-bottom: 0;
-      }
     }
 
     svg {
-      fill: $blueBackground;
-    }
-
-    &:hover {
-      background: $blueBackground;
-      border: 1px solid $blueBackground;
-      border-left: 2px solid $blueBackground;
-
-      transition: background 0.3s linear;
-
-      h3 {
-        color: $text;
-      }
-
-      p {
-        color: $text;
-        height: 100%;
-      }
-
-      svg {
-        fill: $text;
-      }
+      fill: $text;
     }
   }
 }
