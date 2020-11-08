@@ -16,7 +16,7 @@
   color: $text;
 
   @media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
+    (min-resolution: $retina-dppx) {
     background-image: url("../img/boards-desktop@2x.png"),
       url("../img/triangles.svg"),
       url("../img/background-desktop@2x.png");
@@ -29,7 +29,7 @@
   }
 
   @media (max-width: $desktop) and (min-resolution: $retina-dpi),
-  (max-width: $desktop) and (min-resolution: $retina-dppx) {
+    (max-width: $desktop) and (min-resolution: $retina-dppx) {
     background-image: url("../img/boards-tablet@2x.png"),
       url("../img/triangles.svg"),
       url("../img/background-tablet@2x.png");
@@ -47,7 +47,7 @@
   }
 
   @media (max-width: $tablet) and (min-resolution: $retina-dpi),
-  (max-width: $tablet) and (min-resolution: $retina-dppx) {
+    (max-width: $tablet) and (min-resolution: $retina-dppx) {
     background-image: url("../img/boards-mobile@2x.png"),
       url("../img/triangles.svg"),
       url("../img/background-tablet@2x.png");
