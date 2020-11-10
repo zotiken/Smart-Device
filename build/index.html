@@ -52,7 +52,7 @@
             </a>
           </li>
           <li class="feedback__order">
-            <button class="button" id="callback_button">
+            <button type="button" class="button" id="callback_button">
               Заказать звонок
             </button>
           </li>
@@ -306,7 +306,7 @@
             <label class="visually-hidden" for="feedback_name">имя</label>
             <label class="visually-hidden" for="feedback_phone">телефон</label>
 
-            <input type="text" name="name" placeholder="Имя" data-type="local" id="feedback_name" required="">
+            <input class="form__name" type="text" name="name" placeholder="Имя" data-type="local" id="feedback_name" required="">
             <input type="text" name="phone" maxlength="16" data-type="local" placeholder="Телефон" id="feedback_phone" required="">
           </div>
           <label class="visually-hidden" for="feedback_text">телефон</label>
@@ -431,7 +431,7 @@
         <label class="visually-hidden" for="modal_name">имя</label>
         <label class="visually-hidden" for="modal_phone">телефон</label>
 
-        <input type="text" name="name" placeholder="Имя" autofocus="" data-type="local" id="modal_name" required="">
+        <input type="text" class="form__name" name="name" placeholder="Имя" autofocus="" data-type="local" id="modal_name" required="">
         <input type="text" name="phone" maxlength="16" placeholder="Телефон" data-type="local" id="modal_phone" required="">
       </div>
       <label class="visually-hidden" for="modal_text">Тект</label>
