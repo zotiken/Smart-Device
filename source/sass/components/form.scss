@@ -65,9 +65,15 @@
   @media (max-width: $tablet) {
     width: 100%;
 
-    &:nth-child(1) {
-      margin-bottom: 25px;
-    }
+    // & .form__name {
+    //   margin-bottom: 25px;
+    // }
+  }
+}
+
+.form__name {
+  @media (max-width: $tablet) {
+    margin-bottom: 25px;
   }
 }
 
