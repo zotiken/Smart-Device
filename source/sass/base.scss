@@ -17,6 +17,7 @@ img {
 }
 
 body {
+  // width: 1920px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -32,7 +33,7 @@ body {
 }
 
 html {
-  font-family: "scroll-behavior: smooth","Arial", sans-serif;
+  font-family: "scroll-behavior: smooth", "Arial", sans-serif;
   scroll-behavior: smooth;
   --scroll-behavior: smooth;
 }

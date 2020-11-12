@@ -19,7 +19,10 @@
   var footerNav = document.querySelector('.nav_footer__navigation_list');
   var footerContacts = document.querySelector('.nav_footer__contacts');
 
-  footerNav.querySelector('ul').classList.add(HIDDEN);
+  footerNav.querySelectorAll('ul').forEach(function (userItem) {
+    userItem.classList.add(HIDDEN);
+  });
+
   footerNav.querySelector('h3').classList.add(HIDDEN);
 
   footerContacts.querySelector('ul').classList.add(HIDDEN);
@@ -27,27 +30,37 @@
 
   body.classList.remove('no-js');
 
+  var setState = function (item, action, param) {
+    item.forEach(function (userItem) {
+      userItem.classList[action](param);
+    });
+  };
+
   var accordionItems = [footerNav, footerContacts];
   accordionItems.forEach(function (item, i) {
     item.querySelector('h3').addEventListener('click', function (e) {
-      if (e.target.classList[0] === HIDDEN) {
-        e.target.classList.remove(HIDDEN);
-        e.target.classList.add(VISIBLE);
-        e.target.parentNode.querySelector('ul').classList.remove(HIDDEN);
-        e.target.parentNode.querySelector('ul').classList.add(VISIBLE);
+
+      var list = e.target.parentNode.querySelectorAll('ul');
+      var classesElement = e.target.classList;
+
+      if (classesElement[0] === HIDDEN) {
+        classesElement.remove(HIDDEN);
+        classesElement.add(VISIBLE);
+        setState(list, 'remove', HIDDEN);
+        setState(list, 'add', VISIBLE);
       } else {
-        e.target.classList.remove(VISIBLE);
-        e.target.classList.add(HIDDEN);
-        e.target.parentNode.querySelector('ul').classList.remove(VISIBLE);
-        e.target.parentNode.querySelector('ul').classList.add(HIDDEN);
+        classesElement.remove(VISIBLE);
+        classesElement.add(HIDDEN);
+        setState(list, 'add', HIDDEN);
+        setState(list, 'remove', VISIBLE);
       }
 
       var action = function (a, id) {
         if (id !== i) {
           a.querySelector('h3').classList.remove(VISIBLE);
           a.querySelector('h3').classList.add(HIDDEN);
-          a.querySelector('ul').classList.remove(VISIBLE);
-          a.querySelector('ul').classList.add(HIDDEN);
+          setState(a.querySelectorAll('ul'), 'add', HIDDEN);
+          setState(a.querySelectorAll('ul'), 'remove', VISIBLE);
         }
       };
       accordionItems.map(function (r, index) {
@@ -87,8 +100,9 @@
 
   document.querySelectorAll('form').forEach(function (form) {
     var content = form.id;
-    var itemArray = localStorage.getItem(content) ?
-      JSON.parse(localStorage.getItem(content)) : {};
+    var itemArray = localStorage.getItem(content)
+      ? JSON.parse(localStorage.getItem(content))
+      : {};
 
     form.querySelectorAll('[data-type="local"]').forEach(function (item) {
       if (localStorage.getItem(content)) {

@@ -3,10 +3,12 @@
 
   @media (max-width: $desktop) {
     min-width: auto;
+    margin-left: 3px;
   }
 
   @media (max-width: $tablet) {
     min-width: auto;
+    margin-left: 0;
   }
 }
 
@@ -61,13 +63,24 @@
 
 .form__container input {
   width: 47%;
+  box-shadow: none;
+  border-radius: 0;
+
+  @media (max-width: $desktop) {
+    width: 47.3%;
+    padding: 16px;
+  }
 
   @media (max-width: $tablet) {
     width: 100%;
+  }
+}
 
-    // & .form__name {
-    //   margin-bottom: 25px;
-    // }
+.form__container input[name="phone"] {
+  margin-left: 5%;
+
+  @media (max-width: $tablet) {
+    margin-left: 0;
   }
 }
 
@@ -124,11 +137,13 @@
 
 .form textarea {
   width: 100%;
+  border-radius: 0;
   max-height: 154px;
   margin-bottom: 44px;
 
   @media (max-width: $desktop) {
     max-height: 160px;
+    margin-top: 8px;
   }
 
   @media (max-width: $tablet) {

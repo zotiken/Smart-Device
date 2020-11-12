@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 31px;
+  padding-top: 33px;
   padding-bottom: 33px;
   width: 100%;
   color: $text;
@@ -62,8 +62,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 46.8%;
-  min-width: max-content;
+  width: 31.2%;
+  flex-wrap: wrap;
+  // min-width: max-content;
 
   @media (max-width: $desktop) {
     width: 13%;
@@ -71,7 +72,7 @@
   }
 
   @media (max-width: $tablet) {
-    width: 30%;
+    width: 86px;
     margin-bottom: 5px;
   }
 }
@@ -112,10 +113,14 @@
 }
 
 .feedback__mail {
-  width: 20%;
+  margin-left: 10px;
+  // margin-left: 71px;
+  // width: 27%;
+  width: 133px;
 
   @media (max-width: $desktop) {
     margin-left: 12px;
+    width: auto;
 
     span {
       display: none;
@@ -140,7 +145,7 @@
     text-decoration: none;
 
     span {
-      margin-left: 10px;
+      margin-left: 20px;
     }
 
 
@@ -152,15 +157,17 @@
 }
 
 .feedback__phone {
-  width: 32%;
-  margin-left: 60px;
+  margin-left: 10px;
+  // width: 41%;
+  width: 206px;
+  min-width: max-content;
 
   a {
     color: $text;
     text-decoration: none;
 
     span {
-      margin-left: 9px;
+      margin-left: 15px;
     }
 
 
@@ -172,6 +179,7 @@
 
   @media (max-width: $desktop) {
     margin-left: 14px;
+    width: 26%;
 
     span {
       display: none;
@@ -189,7 +197,7 @@
 
 .feedback__order {
   display: block;
-  margin-left: 20px;
+  margin-left: 48px;
   white-space: nowrap;
 
   @media (max-width: $desktop) {

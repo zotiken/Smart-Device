@@ -6,18 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Smart Device</title>
-  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-300.woff" as="font"  type="font/woff" crossorigin="anonymous">
-  <link rel="preload" href="fonts/pt-mono-v8-latin-regular.woff2" as="font"  type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff" as="font" type="font/woff" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-300.woff" as="font" type="font/woff"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/pt-mono-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff" as="font" type="font/woff"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff" as="font" type="font/woff"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css" />
 </head>
 
 <body class="no-js">
   <div style="display: none">
-    <include  src="build/img/sprite_auto.svg"></include>
+    <include src="build/img/sprite_auto.svg"></include>
   </div>
   <header class="header">
     <nav class="header_nav nav">
@@ -51,12 +52,13 @@
               <span> +7 (495) 000 52 52 </span>
             </a>
           </li>
-          <li class="feedback__order">
-            <button type="button" class="button" id="callback_button">
-              Заказать звонок
-            </button>
-          </li>
         </ul>
+        <div class="feedback__order">
+          <button type="button" class="button" id="callback_button">
+            Заказать звонок
+          </button>
+        </div>
+
       </div>
     </nav>
     <div class="header__banner banner">
@@ -73,7 +75,7 @@
             </a>
           </div>
         </div>
-        <a class="banner__scroll link" href="#features" tabindex=0 >Скролл вниз</a>
+        <a class="banner__scroll link" href="#features" tabindex=0>Скролл вниз</a>
       </div>
     </div>
   </header>
@@ -152,12 +154,12 @@
                   ./img/2005-tablet@2x.jpg 2x
                 " media="(max-width: 1023px)" />
             <!--  115px; 2x: 229px -->
-            <img src="./img/2005-desktop@1x.jpg" srcset="./img/2005-desktop@2x.jpg 2x" width="115" height="305" loading="lazy"
-              alt="2005" />
+            <img src="./img/2005-desktop@1x.jpg" srcset="./img/2005-desktop@2x.jpg 2x" width="115" height="305"
+              loading="lazy" alt="2005" />
           </picture>
           <div class="about__content">
             <h2 class="about__title">О компании</h2>
-            <p class="about__text">
+            <p class="about__text about__text--first">
               Мы поставляем электронные комплектующие, производим печатные
               платы и предоставляем мировые технологии с 1997 года. Выполняем
               срочные заказы и пилотные образцы до 10 дней.
@@ -203,17 +205,17 @@
                     " type="image/webp" />
                 <!-- 290px; 2x: 580px -->
                 <source media="(max-width: 767px)" srcset="
-                      ./img/production-mobile@1x.jpg 1x,
-                      ./img/production-mobile@2x.jpg 2x
+                      ./img/production-mobile@1x.png 1x,
+                      ./img/production-mobile@2x.png 2x
                     " />
                 <!-- 720px; 2x: 1440px -->
                 <source media="(max-width: 1023px)" srcset="
-                      ./img/production-tablet@1x.jpg 1x,
-                      ./img/production-tablet@2x.jpg 2x
+                      ./img/production-tablet@1x.png 1x,
+                      ./img/production-tablet@2x.png 2x
                     " />
                 <!-- 370px; 2x: 740px -->
-                <img src="./img/production-desktop@1x.jpg " srcset="./img/production-desktop@2x.jpg 2x" loading="lazy" width="370"
-                  height="620" alt="Печатные платы" />
+                <img src="./img/production-desktop@1x.png " srcset="./img/production-desktop@2x.png 2x" loading="lazy"
+                  width="370" height="620" alt="Печатные платы" />
               </picture>
             </a>
           </li>
@@ -251,8 +253,8 @@
                     " />
                 <!-- 370px; 2x: 740px -->
 
-                <img src="./img/assembling-desktop@1x.png" srcset="./img/assembling-desktop@2x.png 2x" loading="lazy" width="370"
-                  height="620" alt="Микросхемы" />
+                <img src="./img/assembling-desktop@1x.png" srcset="./img/assembling-desktop@2x.png 2x" loading="lazy"
+                  width="370" height="620" alt="Микросхемы" />
               </picture>
             </a>
           </li>
@@ -290,8 +292,8 @@
                     " />
                 <!-- 370px; 2x: 740px -->
 
-                <img src="./img/components-desktop@1x.png" srcset="./img/components-desktop@2x.png 2x" loading="lazy" width="370"
-                  height="620" alt="Светодиодная лента" />
+                <img src="./img/components-desktop@1x.png" srcset="./img/components-desktop@2x.png 2x" loading="lazy"
+                  width="370" height="620" alt="Светодиодная лента" />
               </picture>
             </a>
           </li>
@@ -301,7 +303,7 @@
     <section class="main__feedback-form feedback-form" id="feedback">
       <div class="feedback-form__wrapper wrapper wrapper--main">
         <picture class="feedback-form__image">
-          <source  srcset="./img/airplane@1x.webp 1x, ./img/airplane@2x.webp 2x" type="image/webp" />
+          <source srcset="./img/airplane@1x.webp 1x, ./img/airplane@2x.webp 2x" type="image/webp" />
           <img src="./img/airplane@1x.png" srcset="./img/airplane@1x.png 2x" loading="lazy" width="511" height="288"
             alt="Бумажный самолет" />
         </picture>
@@ -312,12 +314,15 @@
             <label class="visually-hidden" for="feedback_name">имя</label>
             <label class="visually-hidden" for="feedback_phone">телефон</label>
 
-            <input class="form__name" type="text" name="name" placeholder="Имя" data-type="local" id="feedback_name" required />
-            <input type="text" name="phone" maxlength="16" data-type="local" placeholder="Телефон"  id="feedback_phone"  required/>
+            <input class="form__name" type="text" name="name" placeholder="Имя" data-type="local" id="feedback_name"
+              required />
+            <input type="text" name="phone" maxlength="16" data-type="local" placeholder="Телефон" id="feedback_phone"
+              required />
           </div>
           <label class="visually-hidden" for="feedback_text">телефон</label>
 
-          <textarea name="text" data-type="local" cols="30" rows="10" placeholder="Ваш вопрос" id="feedback_text" ></textarea>
+          <textarea name="text" data-type="local" cols="30" rows="10" placeholder="Ваш вопрос"
+            id="feedback_text"></textarea>
           <div class="form__container form__container--submit">
             <label tabindex=0>
               <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required />
@@ -339,7 +344,7 @@
     <div class="footer__wrapper wrapper">
       <div class="footer__nav_footer nav_footer">
         <div class="nav_footer__container">
-          <a  class="nav_footer__logo logo">
+          <a class="nav_footer__logo logo">
             <div>
               <svg width="52" height="52">
                 <use xlink:href="#icon-brain"></use>
@@ -379,34 +384,38 @@
         <div class="nav_footer__navigation">
           <div class="nav_footer__navigation_list">
             <h3>Разделы сайта</h3>
-            <ul class="list">
-              <li>
-                <a class="nav_footer__link link link--dark" href="#">О компании</a>
-              </li>
-              <li>
-                <a class="nav_footer__link link link--dark" href="#">Продукты</a>
-              </li>
-              <li>
-                <a class="nav_footer__link link link--dark" href="#">Производство печатных плат</a>
-              </li>
-              <li>
-                <a class="nav_footer__link link link--dark" href="#">Монтаж печатных плат</a>
-              </li>
-              <li>
-                <a class="nav_footer__link link link--dark" href="#">Комплектующие</a>
-              </li>
-              <li>
-                <a class="nav_footer__link link link--dark" href="#">Доставка</a>
-              </li>
-              <li>
-                <a class="nav_footer__link link link--dark" href="#">Контакты</a>
-              </li>
-            </ul>
+            <div class="nav_footer__navigation_container">
+              <ul class="list">
+                <li>
+                  <a class="nav_footer__link link link--dark" href="#">О компании</a>
+                </li>
+                <li>
+                  <a class="nav_footer__link link link--dark" href="#">Продукты</a>
+                </li>
+                <li>
+                  <a class="nav_footer__link link link--dark" href="#">Производство печатных плат</a>
+                </li>
+                <li>
+                  <a class="nav_footer__link link link--dark" href="#">Монтаж печатных плат</a>
+                </li>
+              </ul>
+              <ul class="list list--two">
+                <li>
+                  <a class="nav_footer__link link link--dark" href="#">Комплектующие</a>
+                </li>
+                <li>
+                  <a class="nav_footer__link link link--dark" href="#">Доставка</a>
+                </li>
+                <li>
+                  <a class="nav_footer__link link link--dark" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="nav_footer__contacts">
             <h3>Наш офис</h3>
             <ul class="list">
-              <li><a  class="nav_footer__link link link--dark" href="#">г. Мытищи, Олимпийский проспект, д.10</a></li>
+              <li><a class="nav_footer__link link link--dark" href="#">г. Мытищи, Олимпийский проспект, д.10</a></li>
               <li><a class="nav_footer__link link link--dark" href="tel:+74955894050">+7 (495) 589-40-50</a></li>
               <li><a class="nav_footer__link link link--dark" href="tel:+79250038767">+7 (925) 003-87-67</a></li>
               <li><a class="nav_footer__link link link--dark" href="tel:+792692608079">+7 (926) 926-080-79</a></li>
@@ -437,8 +446,10 @@
         <label class="visually-hidden" for="modal_name">имя</label>
         <label class="visually-hidden" for="modal_phone">телефон</label>
 
-        <input type="text" class="form__name" name="name" placeholder="Имя" autofocus="" data-type="local"  id="modal_name" required/>
-        <input type="text" name="phone" maxlength="16" placeholder="Телефон" data-type="local" id="modal_phone" required/>
+        <input type="text" class="form__name" name="name" placeholder="Имя" autofocus="" data-type="local"
+          id="modal_name" required />
+        <input type="text" name="phone" maxlength="16" placeholder="Телефон" data-type="local" id="modal_phone"
+          required />
       </div>
       <label class="visually-hidden" for="modal_text">Тект</label>
 
@@ -464,7 +475,7 @@
       </div>
     </form>
   </div>
-  <script src="js/vendor.js"></script>
+  <script defer src="js/vendor.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>
 

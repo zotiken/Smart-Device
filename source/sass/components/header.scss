@@ -7,12 +7,12 @@
   background-image: url("../img/boards-desktop@1x.png"),
     url("../img/triangles.svg"),
     url("../img/background-desktop@1x.png");
-  background-position: 85.5% 71%, 80.2% 69.1%, center center;
+  background-position: 85.5% 71%, 80.3% 69.7%, center center;
   background-repeat: no-repeat;
   background-size: auto 58.6%, auto, cover;
   width: 100%;
   height: 100vh;
-  max-height: 877px;
+  max-height: 878px;
   color: $text;
 
   @media (min-resolution: $retina-dpi),
@@ -36,11 +36,9 @@
   }
 
   @media (max-width: $tablet) {
-    background-image: url("../img/boards-mobile@2x.png"),
-      url("../img/triangles.svg"),
-      url("../img/background-mobile@1x.png");
-    background-position: 130% 22%, 171px 76px, center top;
-    background-size: auto 34%, auto 55%, cover;
+    background-image: url("../img/background-mobile@1x.jpg");
+    background-position: top;
+    background-size: cover;
     padding-right: 0;
     padding-left: 0;
     height: 647px;
@@ -48,9 +46,7 @@
 
   @media (max-width: $tablet) and (min-resolution: $retina-dpi),
     (max-width: $tablet) and (min-resolution: $retina-dppx) {
-    background-image: url("../img/boards-mobile@2x.png"),
-      url("../img/triangles.svg"),
-      url("../img/background-tablet@2x.png");
+    background-image: url("../img/background-tablet@2x.jpg");
   }
 }
 
